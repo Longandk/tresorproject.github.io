@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POPUPS</title>
+    <link rel="stylesheet" href="styletwo.css">
+    <style>
+        .container{
+            position:relative;
+            min-height:100vh;
+            background:#ddd;
+        }
+
+        .container h1 {
+            font-size: 40px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: normal;
+            padding:15px;
+            color: #333;
+            text-align: center;
+            text-transform: capitalize;
+        }
+
+        .container .image-container {
+            display:flex;
+            flex-wrap: wrap;
+            gap:15px;
+            justify-content: center;
+            padding:10px;
+        }
+
+        .container .image-container .image{
+
+            height:250px;
+            width:350px;
+            border:5px solid #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,.1);
+            overflow:hidden;
+            cursor:pointer;
+        }
+
+   .container .image-container .image img{
+
+     width:100%;
+     height:100%;
+     object-fit: cover;
+     transition: .2s linear;
+}
+
+.container .image-container .image img:hover{
+    transform:scaleX(1.1);
+
+}
+.container .popup-image {
+    position:fixed;
+    top:0;
+    left:0;
+    background: rgba(0,0,0,.9);
+    height:100%;
+    width:100%;
+    z-index: 100;
+    display:none;
+}
+
+.container .popup-image span {
+    position:absolute;
+    top:0;
+    right:10px;
+    font-size: 60px;
+    font-weight: bolder;
+    color:#fff;
+    cursor:pointer;
+    z-index: 100;
+}
+
+.container .popup-image img {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    border:5px solid #fff;
+    border-radius: 5px;
+    width:600px;
+    height:500px;
+    object-fit: cover;
+}
+
+@media screen and (max-width:768px){
+    .container .popup-image img {
+        width:95%;
+    }
+}
+
+    </style>
+</head>
+<body>
+   <div class="container">
+
+    <div class="image-container">
+        <div class="image"><img src="uploading/img-1.jpg" alt=""></div>
+        <div class="image"><img src="uploading/img-2.jpg" alt=""></div>
+        <div class="image"><img src="uploading/img-3.png" alt=""></div>
+        <div class="image"><img src="uploading/img-4.jpg" alt=""></div>
+        <div class="image"><img src="uploading/img-5.webp" alt=""></div>
+        <div class="image"><img src="uploading/img-6.png" alt=""></div>
+    </div>
+    <div class="container-fally">
+        <img id="fallyup" src="uploading/fally6.png" alt="">
+        <div class="messagefally">
+            <div class="headingclose">
+        <h4 class="heading">Fally Ipupa in Concert</h4>
+        <p class="message">At Paris La Arena</p>
+        <p class="date">Date: 24/01/2024</p>
+        </div>
+        </div>
+     </div>
+    <div class="popup-image">
+        <span>&times;</span>
+        <img src="uploading/img-1.jpg" alt="">
+    </div>
+   </div> 
+  
+</div>
+
+   <script>
+
+    const ImgCont = document.querySelectorAll('.image-container img');
+    const ImgPop = document.querySelector('.popup-image');
+            const ImgiPop = document.querySelector('.popup-image img');
+
+    ImgCont.forEach(image =>{
+
+        image.addEventListener('click', function(){
+
+           
+            ImgPop.style.display = 'block';
+            ImgiPop.src = image.getAttribute('src');
+        });
+    });
+    
+    const Pops = document.querySelector('.popup-image span');
+
+    Pops.addEventListener('click', function(){
+        ImgPop.style.display = 'none';
+    });
+   </script>
+</body>
+</html>

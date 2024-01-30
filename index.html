@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROFILE</title>
+    <link rel="stylesheet" href="styletwo.css">
+    <style>
+        @media screen and (max-width: 375px){
+    .container-mainoneb {
+        width:50%;
+        height:100vh;
+        position: absolute;
+        top:0%;;
+        left:100%;
+        opacity: 1;
+        animation-name: maintwo;
+        animation-duration: 0s;
+        animation-delay: 0s;
+        animation-fill-mode: forwards;
+        background: #2e6b31;
+        z-index: 1000;
+        transition: 3s;
+        
+    }
+
+    .container-mainoneb.is-active {
+        left: 50%;
+    }
+    
+    @keyframes maintwo {
+        from {
+            top:0%;
+            opacity:1;
+        }
+    
+        to {
+            top:50%;
+            opacity:1;
+        }
+    }
+    
+    .container-mainoneb nav {
+        width:100%;
+        height:100vh;
+        background:#2e6b31;
+    }
+    
+    .container-mainoneb nav ul{
+        width:100%;
+        height:100vw;
+        display: flex;
+        flex-direction: column;
+        background:#2e6b31;
+    }
+    
+    .container-mainoneb nav ul li {
+        width:100%;
+        height: 60px;
+        border-right: none;
+        border-bottom: 2px solid #fff;
+        list-style: none;
+        text-align: center;
+        padding:10px 10px;
+        color: white;
+        background: #2e6b31;
+        transition: 0.2s;
+    
+    
+    }
+    
+    .container-mainoneb nav ul li:hover {
+    
+        background: #fff;
+        border-bottom: #2e6b31 ;
+        border-bottom: 3px solid #2e6b31;
+    
+        transition: 0.2s;
+    
+    
+    }
+    
+    
+    
+    
+    .container-mainoneb nav ul li a {
+        text-align: center;
+        text-decoration: none;
+        font-size: 20px;
+        font-family: 'Courier New', Courier, monospace;
+        color:#fff;
+        font-weight: bold;
+        transition: 0.2s;
+    }
+    
+    .container-mainoneb nav ul li:hover a {
+    
+        color:#2e6b31;
+        transition: 0.2s;
+    
+    } 
+
+    .toggle {
+    display:block;
+    position:absolute;
+    top:8%;
+    left:85%;
+    cursor:pointer;
+    z-index: 1000;
+}
+
+.tab{
+    display:block;
+    width:25px;
+    height:3px;
+    margin: 5px;
+    background: #2e6b31;
+}
+
+#togletab.active .tab:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+}
+
+#togletab.active .tab:nth-child(2){
+    
+    opacity: 0;
+}
+
+#togletab.active .tab:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
+.container-bannermain{
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container-banner{
+    height: 1000px;
+    margin-top: -45px;
+}
+
+.container-bannerone{
+    width:300px;
+    height: 300px;
+    border-radius: 10px;
+    background: white;
+    position: relative;
+    
+}
+
+.container-bannertwo{
+    width:300px;
+    height: 300px;
+    border-radius: 10px;
+    background: white;
+    position:relative;
+    margin-top: 10px;
+}
+
+.container-bannerthree{
+    width:300px;
+    height: 300px;
+    border-radius: 10px;
+    background: white;
+    position:relative;
+    margin-top: 10px;
+    
+}
+
+.views {
+    width:100%;
+    height:100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding:0px 50px;
+
+}
+
+}
+
+.views {
+    width:100%;
+    height:100px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding:0px 50px;
+
+}
+
+.views a {
+    background: #2e6b31;
+    width:200px;
+    height:30px;
+    padding: 0px 0px ;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 20px;
+    color:white;
+    text-decoration: none;
+    opacity:0;
+    animation-name: views;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 4s;
+}
+
+#pop{
+    width:250px;
+    height:30px;
+}
+
+@keyframes views {
+    from {
+        opacity:0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="container-main">
+        <div class="container-fixed">
+        <div class="container-mainone">
+            
+            <div class="container-mainonea">
+                <h1>CLICK NAV BAR TO VIEW OTHER DESIGNED PAGES</h1>
+                <div class="toggle" id="togletab">
+                    <span class="tab"></span>
+                    <span class="tab"></span>
+                    <span class="tab"></span>
+                </div>
+            </div>
+            <div class="container-mainoneb">
+                <nav>
+                    <ul>
+                        <li><a href="profilethree.html">POP UP IMAGES</a></li>
+                        <li><a href="profilefive.php">IMAGE SLIDER</a></li>
+                        <li><a href="profile.php">DESIGNED PAGE</a></li>
+                        <li><a href="">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        
+        <!---------------navigation bar------------------------------------------- -->
+        <div class="container-banner">
+            <div class="container-bannermain">
+             <div class="container-bannerone">
+                <img id="imgproductone" src="uploading/productone.jpg" alt="">
+                <div class="price">
+                    <span>R299 <br></span>
+                </div>
+             </div>
+             <div class="container-bannertwo">
+                <img id="imgproduct" src="uploading/producttwo.jpeg" alt="">
+                <div class="priceone">
+                    <span>R450</span>
+                </div>
+             </div>
+             <div class="container-bannerthree">
+                <div class="tab-tittles">
+                    <p class="tab-links skills">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EVANS</p>
+                    <p class="tab-links experience">ALOVBO</p>
+                    <p class="tab-links education">MY BOO</p>
+                </div>
+
+                <div class="tab-contents active-tab"  id="skills">
+                <ul>
+                 <li><img id="small"src="uploading/dawn.jpeg" alt=""></li>
+                    
+                </ul>
+                </div>
+                <div class="tab-contents tab-contentsone"  id="experience">
+                    <ul>
+                        <li><img id="small"src="uploading/evan.jpg" alt=""></li>
+                        
+                        
+                    </ul>
+                    </div>
+                    <div class="tab-contents tab-contentstwo"   id="education">
+                        <ul>
+                            <li><img id="small"src="uploading/vaseline.jpeg" alt=""></li>
+                           
+                            
+                        </ul>
+                        </div>
+            </div>
+             </div>
+          </div>
+          <div class="views">
+            <a href="profile.php">View Landing Page</a> <a id="pop" href="profilethree.html">View Click PopUp Images</a>  <a href="profilefive.php">View Slide Image</a>
+          </div>
+ 
+<div>
+
+</div>
+        
+<!----------------banners--------------- -->
+
+    
+    
+</div>
+
+
+</body>
+   
+<script>
+     const elem = document.querySelector('.highlight');
+        const Ski = document.querySelector('.skills');
+        const Exp = document.querySelector('.experience');
+        const Edu = document.querySelector('.education');
+        const SkiJ = document.querySelector('#skills');
+        const ExpJ = document.querySelector('#experience');
+        const EduJ = document.querySelector('#education');
+        const TabC = document.querySelector('.tab-contents');
+        const TabCOne = document.querySelector('.tab-contentsone');
+        const TabTwo = document.querySelector('.tab-contentstwo');
+
+        Ski.addEventListener('click', function(){
+            Edu.classList.remove('highlight');
+            Exp.classList.remove('highlight');
+            Ski.classList.add('highlight');
+            TabC.classList.add('active-tab');
+            TabCOne.classList.remove('active-tab');
+            TabTwo.classList.remove('active-tab');
+            
+            
+        });
+
+        Exp.addEventListener('click', function(){
+            Exp.classList.add('highlight');
+            Ski.classList.remove('highlight');
+            Edu.classList.remove('highlight');
+            TabCOne.classList.add('active-tab');
+            TabC.classList.remove('active-tab');
+            TabTwo.classList.remove('active-tab');
+            
+            
+        });
+
+        Edu.addEventListener('click', function(){
+
+            Edu.classList.add('highlight');
+            Exp.classList.remove('highlight');
+            Ski.classList.remove('highlight');
+            TabTwo.classList.add('active-tab');
+            TabC.classList.remove('active-tab');
+            TabCOne.classList.remove('active-tab');
+            
+        });
+
+        let Tnavbar = document.querySelector(".container-mainoneb");
+        let Ttogle = document.querySelector("#togletab");
+        
+
+       
+        Ttogle.addEventListener('click', function(){
+             
+            Ttogle.classList.toggle("active");
+            Tnavbar.classList.toggle("is-active");
+        } );
+</script>
+</body>
+</html>
